@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
 
 try {
 	require('electron-reloader')(module);
@@ -24,3 +24,41 @@ app.whenReady().then(() => {
 		if (BrowserWindow.getAllWindows().length === 0) createWindow();
 	});
 });
+
+const menuTemplate = [
+	{
+		label: 'File',
+		submenu: [{ role: 'quit' }],
+	},
+
+	{
+		label: 'Edit',
+		submenu: [
+			{ role: 'undo' },
+			{ role: 'redo' },
+			{ type: 'separator' },
+			{ role: 'cut' },
+			{ role: 'copy' },
+			{ role: 'paste' },
+			{ type: 'separator' },
+			{ label: 'Save' },
+		],
+	},
+
+	{
+		label: 'View',
+		submenu: [{ role: 'reload' }, { role: 'togglefullscreen' }],
+	},
+
+	{
+		label: 'Help',
+		submenu: [
+			{
+				label: 'Learn More',
+			},
+		],
+	},
+];
+
+const menu = Menu.buildFromTemplate(menuTemplate);
+Menu.setApplicationMenu(menu);
