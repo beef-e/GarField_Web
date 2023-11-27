@@ -77,7 +77,7 @@ const menuTemplate = [
 
 	{
 		label: 'View',
-		submenu: [{ role: 'reload' }, { role: 'togglefullscreen' }],
+		submenu: [{ role: 'reload' }, { role: 'togglefullscreen' }, { role: 'toggleDevTools' }],
 	},
 
 	{
