@@ -28,20 +28,20 @@ app.whenReady().then(() => {
 const menuTemplate = [
 	{
 		label: 'File',
-		submenu: [{ role: 'quit' }],
+		submenu: [{ role: 'quit', accelerator: 'CmdOrCtrl+w' }],
 	},
 
 	{
 		label: 'Edit',
 		submenu: [
-			{ role: 'undo' },
-			{ role: 'redo' },
+			{ role: 'undo', accelerator: 'CmdOrCtrl+z' },
+			{ role: 'redo', accelerator: 'CmdOrCtrl+y' },
 			{ type: 'separator' },
 			{ role: 'cut' },
 			{ role: 'copy' },
 			{ role: 'paste' },
 			{ type: 'separator' },
-			{ label: 'Save' },
+			{ label: 'Save', accelerator: 'CmdOrCtrl+s' },
 		],
 	},
 
@@ -55,6 +55,10 @@ const menuTemplate = [
 		submenu: [
 			{
 				label: 'Learn More',
+				click: () => {
+					const { shell } = require('electron');
+					shell.openExternal('https://github.com/beef-e/GarField_Web');
+				},
 			},
 		],
 	},
