@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@editorjs/paragraph@latest"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@editorjs/delimiter@latest"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@editorjs/nested-list@latest"></script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>GarField Cornell</title>
+		<link rel="stylesheet" href="public/css/cornell.css" />
+	</head>
+	<body>
+		<div class="mainWrapper">
+			<input type="text" name="title" id="titleInput" placeholder="Untitled" autofocus />
+			<div class="flex coloumnDiv">
+				<div id="titles"></div>
+				<div id="editorjs"></div>
+			</div>
+		</div>
+
+		<script src="src/js/textInput.js"></script>
+		<script src="src/js/cornellEditor.js"></script>
+	</body>
+</html>

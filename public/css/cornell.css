@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+body {
+  max-width: 100vw;
+}
+
+.mainWrapper {
+  width: calc(100vw - 5px);
+  height: 100vh;
+  text-align: center;
+}
+
+input#titleInput {
+  width: calc(100% - 10px);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  max-width: 800px;
+  height: 40px;
+  padding-left: 8px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #6c6c6c;
+  color: #dcdcdc;
+  outline: none;
+}
+input#titleInput:focus {
+  background-color: #616161;
+}
+
+.flex {
+  display: flex;
+}
+
+div.coloumnDiv {
+  width: 100%;
+  height: 100%;
+}
+
+#editorjs,
+#titles {
+  width: 50%;
+  height: 100%;
+  overflow-y: scroll;
+}
