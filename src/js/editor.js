@@ -10,8 +10,10 @@ const editor = new EditorJS({
 	tools: {
 		header: {
 			class: Header,
-			levels: [2, 3, 4],
-			defaultLevel: 2,
+			config: {
+				levels: [2, 3, 4],
+				defaultLevel: 2,
+			},
 			inlineToolbar: false,
 			shortcut: shortcuts[0],
 		},
