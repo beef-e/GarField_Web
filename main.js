@@ -2,17 +2,9 @@ const { app, BrowserWindow, Menu } = require('electron');
 let modeVar = true;
 
 const switchModeTrigger = () => {
-	console.log('switch mode');
-	console.log(modeVar);
 	modeVar = !modeVar;
-	/*BrowserWindow.getAllWindows().forEach((win) => {
-		if (mode) win.loadFile('index.html');
-		else win.loadFile('cornell.html');
-	});*/
 	createWindow(modeVar);
 	chiudiUltimaFinestra();
-	//app.relaunch();
-	//app.quit();
 };
 
 try {
@@ -30,8 +22,6 @@ const createWindow = (modeVar) => {
 	} else {
 		win.loadFile('cornell.html');
 	}
-
-	//win.loadFile('index.html');
 };
 
 app.whenReady().then(() => {
