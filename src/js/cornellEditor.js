@@ -1,4 +1,6 @@
 const shortcuts = ['ALT+SHIFT+H', 'ALT+SHIFT+P', 'ALT+SHIFT+D', 'ALT+SHIFT+L'];
+let activeEditor = 'left';
+const switchShortcut = 'p';
 
 const editor = new EditorJS({
 	holder: 'editorjs',
@@ -33,4 +35,19 @@ const leftEditor = new EditorJS({
 			inlineToolbar: false,
 		},
 	},
+});
+
+document.addEventListener('keydown', function (event) {
+	const key = switchShortcut;
+	console.log(key);
+	if (event.ctrlKey && event.altKey && event.key === key) {
+		console.log('Switching editors!');
+		if (activeEditor === 'left') {
+			editor.focus();
+			activeEditor = 'right';
+		} else {
+			leftEditor.focus();
+			activeEditor = 'left';
+		}
+	}
 });
