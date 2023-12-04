@@ -43,10 +43,10 @@ document.addEventListener('keydown', function (event) {
 	if (event.ctrlKey && event.altKey && event.key === key) {
 		console.log('Switching editors!');
 		if (activeEditor === 'left') {
-			editor.focus();
+			editor.focus(true);
 			activeEditor = 'right';
 		} else {
-			leftEditor.focus();
+			leftEditor.focus(true);
 			activeEditor = 'left';
 		}
 	}
